@@ -13,5 +13,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.1",
     "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "@lib-template/components": "workspace:^"
   }
 }

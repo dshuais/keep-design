@@ -1,5 +1,5 @@
 {
-  "name": "lib-template",
+  "name": "@lib-template/utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,11 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@vue/runtime-core": "^3.4.1",
-    "less": "^4.2.0",
-    "typescript": "^5.3.3",
-    "vue": "^3.3.13"
-  }
+  "license": "ISC"
 }
