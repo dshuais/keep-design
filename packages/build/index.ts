@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 17:21:44
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 18:39:40
+ * @LastEditTime: 2024-01-02 18:48:23
  * @description: 构建
  */
 import delPath from "../utils/delpath";
@@ -40,7 +40,7 @@ export const buildComponent = () => {
 export default series(
   async () => removeDist(),
   parallel(
-    // async () => buildStyle(),
+    async () => buildStyle(),
     async () => buildComponent()
   )
 );
