@@ -1,5 +1,5 @@
 import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, renderSlot } from "vue";
-import "./index.less.mjs";
+import "./index.css";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   ...{
     name: "k-button"

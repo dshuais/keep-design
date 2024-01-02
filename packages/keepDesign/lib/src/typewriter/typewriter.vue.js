@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
-require("./index.less.js");
+require("./index.css");
 const _hoisted_1 = { class: "k-typewriter" };
 const _sfc_main = /* @__PURE__ */ vue.defineComponent({
   ...{

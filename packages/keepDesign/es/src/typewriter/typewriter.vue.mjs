@@ -1,5 +1,5 @@
 import { defineComponent, openBlock, createElementBlock } from "vue";
-import "./index.less.mjs";
+import "./index.css";
 const _hoisted_1 = { class: "k-typewriter" };
 const _sfc_main = /* @__PURE__ */ defineComponent({
   ...{

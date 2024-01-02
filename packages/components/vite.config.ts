@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 16:57:07
+ * @LastEditTime: 2024-01-02 18:34:17
  * @description: viteconfig
  */
 import { defineConfig } from 'vite'
@@ -14,7 +14,7 @@ export default defineConfig({
     outDir: 'es', // 打包后文件目录
     minify: false, // 是否压缩
     rollupOptions: {
-      external: ['vue'], // 忽略打包vue文件
+      external: ['vue', /\.less/], // 忽略打包vue文件
       input: ['index.ts'],
       output: [
         {
@@ -47,6 +47,24 @@ export default defineConfig({
       outputDir: ['../keepDesign/es/src', '../keepDesign/lib/src'],
       // 指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json',
-    })
+    }),
+    {
+      name: 'style',
+      generateBundle(options, bundle) {
+        // 这里可以获取打包后的文件目录以及代码code
+        const keys = Object.keys(bundle);
+
+        for (const key of keys) {
+          const bundler: any = bundle[key];
+          // rollup内置方法,将所有输出文件code中的.less换成.css,因为我们当时没有打包less文件
+
+          this.emitFile({
+            type: 'asset',
+            fileName: key, // 文件名不变 **.less
+            source: bundler.code.replace(/\.less/g, '.css')
+          })
+        }
+      }
+    }
   ],
 })
