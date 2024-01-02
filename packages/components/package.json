@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "removePath": "gulp -f ../build/index.ts",
+    "build": "gulp -f ../build/index.ts && vite build"
   },
   "keywords": [],
   "author": "",
