@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2023-12-30 18:02:53
  * @LastEditors: dushuai
- * @LastEditTime: 2023-12-30 18:21:20
+ * @LastEditTime: 2024-01-03 15:45:19
  * @Description: 组件导出文件
  */
 import _Button from "./button.vue";
@@ -24,5 +24,5 @@ const withInstall = <T>(component: T) => {
   return comp;
 };
 
-export const Button = withInstall(_Button);
-export default Button;
+export const KButton = withInstall(_Button);
+export default KButton;

@@ -1,3 +1,10 @@
+/*
+ * @Author: dushuai
+ * @Date: 2024-01-02 18:09:35
+ * @LastEditors: dushuai
+ * @LastEditTime: 2024-01-03 15:20:58
+ * @description: 执行命令脚本
+ */
 import { spawn } from 'child_process'
 
 export default async (command: string, path: string) => {

@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:36:19
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 16:38:37
+ * @LastEditTime: 2024-01-03 15:46:51
  * @description: 组件导出文件
  */
 import _Typewriter from './typewriter.vue'
@@ -24,5 +24,5 @@ const withInstall = <T>(component: T) => {
   return comp;
 };
 
-export const Typewriter = withInstall(_Typewriter);
-export default Typewriter;
+export const KTypewriter = withInstall(_Typewriter);
+export default KTypewriter;

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:keep": "gulp -f ./packages/build/index.ts",
+    "publish:keep": "gulp -f ./packages/publish/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
     "less": "^4.2.0",
+    "release-it": "^17.0.1",
     "sucrase": "^3.35.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",

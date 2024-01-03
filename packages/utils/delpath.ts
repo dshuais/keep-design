@@ -2,8 +2,8 @@
  * @Author: dushuai
  * @Date: 2024-01-02 17:08:02
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 17:12:51
- * @description: 打包前 先删除文件
+ * @LastEditTime: 2024-01-03 15:22:06
+ * @description: 删除文件
  */
 import fs from 'fs'
 import { resolve } from 'path'
