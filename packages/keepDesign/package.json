@@ -1,6 +1,6 @@
 {
   "name": "keep-design",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -31,5 +31,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/dshuais/keep-design.git"
-  }
+  },
+  "homepage": "https://keep-design.dshuais.com/"
 }
