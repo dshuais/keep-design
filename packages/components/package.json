@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:keep": "gulp -f ../build/index.ts",
-    "publish:keep": "gulp -f ../publish/index.ts",
+    "build:keep": "gulp -f ./script/build/index.ts",
+    "publish:keep": "gulp -f ./script/publish/index.ts",
     "build": "vite build"
   },
   "keywords": [],

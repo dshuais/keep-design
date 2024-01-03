@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:keep": "gulp -f ./packages/build/index.ts",
-    "publish:keep": "gulp -f ./packages/publish/index.ts"
+    "build:keep": "gulp -f ./packages/components/script/build/index.ts",
+    "publish:keep": "gulp -f ./packages/components/script/publish/index.ts"
   },
   "keywords": [],
   "author": "",
