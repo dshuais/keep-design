@@ -22,7 +22,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
     "less": "^4.2.0",
-    "release-it": "^17.0.1",
+    "release-it": "^15.6.0",
     "sucrase": "^3.35.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",

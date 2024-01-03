@@ -3,7 +3,9 @@ import { pkgPath } from "../utils/paths";
 import { series } from "gulp";
 
 export const publishComponent = async () => {
-  run("release-it", `${pkgPath}/keepDesign`)
+  console.log(`${pkgPath}\\keepDesign`);
+
+  run("release-it", `${pkgPath}\\keepDesign`)
 }
 
 export default series(async () => publishComponent());

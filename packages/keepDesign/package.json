@@ -30,7 +30,10 @@
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dshuais/keep-design.git"
+    "url": "https://github.com/dshuais/keep-design"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "homepage": "https://keep-design.dshuais.com/"
 }
