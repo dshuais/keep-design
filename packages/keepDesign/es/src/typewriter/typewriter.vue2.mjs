@@ -1,4 +1,4 @@
-import _sfc_main from "./typewriter.vue.mjs";
+import f from "./typewriter.vue.mjs";
 export {
-  _sfc_main as default
+  f as default
 };

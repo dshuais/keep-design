@@ -1,15 +1,14 @@
-import * as index$1 from "./src/index.mjs";
-import { Button } from "./src/button/index.mjs";
-import { Typewriter } from "./src/typewriter/index.mjs";
-const index = {
-  install: (app) => {
-    for (let c in index$1) {
-      app.use(index$1[c]);
-    }
+import * as t from "./src/index.mjs";
+import { Button as f } from "./src/button/index.mjs";
+import { Typewriter as s } from "./src/typewriter/index.mjs";
+const r = {
+  install: (e) => {
+    for (let o in t)
+      e.use(t[o]);
   }
 };
 export {
-  Button,
-  Typewriter,
-  index as default
+  f as Button,
+  s as Typewriter,
+  r as default
 };

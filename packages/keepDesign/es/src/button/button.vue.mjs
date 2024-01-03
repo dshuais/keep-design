@@ -1,27 +1,20 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, renderSlot } from "vue";
+import { defineComponent as r, computed as s, openBlock as u, createElementBlock as a, normalizeClass as p, renderSlot as l } from "vue";
 import "./index.css";
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  ...{
-    name: "k-button"
-  },
+const d = /* @__PURE__ */ r({
+  name: "k-button",
   __name: "button",
   props: {
     type: {}
   },
-  setup(__props) {
-    const buttonProps = __props;
-    const buttonClass = computed(() => {
-      return { [`k-button--${buttonProps.type}`]: buttonProps.type };
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
-        class: normalizeClass(["k-button", buttonClass.value])
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 2);
-    };
+  setup(e) {
+    const t = e, o = s(() => ({ [`k-button--${t.type}`]: t.type }));
+    return (n, c) => (u(), a("button", {
+      class: p(["k-button", o.value])
+    }, [
+      l(n.$slots, "default")
+    ], 2));
   }
 });
 export {
-  _sfc_main as default
+  d as default
 };

@@ -1,15 +1,1 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const index$3 = require("./src/index.js");
-const index$1 = require("./src/button/index.js");
-const index$2 = require("./src/typewriter/index.js");
-const index = {
-  install: (app) => {
-    for (let c in index$3) {
-      app.use(index$3[c]);
-    }
-  }
-};
-exports.Button = index$1.Button;
-exports.Typewriter = index$2.Typewriter;
-exports.default = index;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.js"),i=require("./src/button/index.js"),n=require("./src/typewriter/index.js"),u={install:t=>{for(let r in e)t.use(e[r])}};exports.Button=i.Button;exports.Typewriter=n.Typewriter;exports.default=u;

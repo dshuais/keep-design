@@ -1,14 +1,12 @@
-import _sfc_main from "./typewriter.vue.mjs";
-const withInstall = (component) => {
-  const comp = component;
-  comp.install = (app) => {
-    const name = comp.name;
-    app.component(name, comp);
-  };
-  return comp;
-};
-const Typewriter = withInstall(_sfc_main);
+import s from "./typewriter.vue.mjs";
+const a = (n) => {
+  const t = n;
+  return t.install = (o) => {
+    const e = t.name;
+    o.component(e, t);
+  }, t;
+}, m = a(s);
 export {
-  Typewriter,
-  Typewriter as default
+  m as Typewriter,
+  m as default
 };

@@ -1,14 +1,12 @@
-import _sfc_main from "./button.vue.mjs";
-const withInstall = (component) => {
-  const comp = component;
-  comp.install = (app) => {
-    const name = comp.name;
-    app.component(name, comp);
-  };
-  return comp;
-};
-const Button = withInstall(_sfc_main);
+import a from "./button.vue.mjs";
+const c = (n) => {
+  const t = n;
+  return t.install = (o) => {
+    const s = t.name;
+    o.component(s, t);
+  }, t;
+}, e = c(a);
 export {
-  Button,
-  Button as default
+  e as Button,
+  e as default
 };

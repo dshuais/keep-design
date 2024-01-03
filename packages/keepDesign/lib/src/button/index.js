@@ -1,14 +1,1 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const button_vue_vue_type_script_setup_true_lang = require("./button.vue.js");
-const withInstall = (component) => {
-  const comp = component;
-  comp.install = (app) => {
-    const name = comp.name;
-    app.component(name, comp);
-  };
-  return comp;
-};
-const Button = withInstall(button_vue_vue_type_script_setup_true_lang.default);
-exports.Button = Button;
-exports.default = Button;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const s=require("./button.vue.js"),l=n=>{const t=n;return t.install=u=>{const o=t.name;u.component(o,t)},t},e=l(s.default);exports.Button=e;exports.default=e;
