@@ -1,0 +1,30 @@
+{
+  "name": "keep-design",
+  "version": "0.0.1-alpha.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "keep-design",
+    "vue3组件库",
+    "ui组件库",
+    "组件库",
+    "design",
+    "vue3+typescript",
+    "components",
+    "vue3-components"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "author": "dshuais",
+  "license": "MIT",
+  "typings": "lib/index.d.ts"
+}
