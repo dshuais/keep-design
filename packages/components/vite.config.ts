@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 18:34:17
+ * @LastEditTime: 2024-01-03 12:01:36
  * @description: viteconfig
  */
 import { defineConfig } from 'vite'
@@ -12,7 +12,7 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   build: {
     outDir: 'es', // 打包后文件目录
-    minify: false, // 是否压缩
+    minify: true, // 是否压缩
     rollupOptions: {
       external: ['vue', /\.less/], // 忽略打包vue文件
       input: ['index.ts'],
