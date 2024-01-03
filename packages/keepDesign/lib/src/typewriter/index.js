@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("./typewriter.vue.js"),s=r=>{const e=r;return e.install=n=>{const u=e.name;n.component(u,e)},e},t=s(o.default);exports.Typewriter=t;exports.default=t;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("./typewriter.vue.js"),s=r=>{const e=r;return e.install=n=>{const u=e.name;n.component(u,e)},e},t=s(o.default);exports.KTypewriter=t;exports.default=t;

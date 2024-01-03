@@ -1,6 +1,6 @@
 import * as t from "./src/index.mjs";
-import { Button as f } from "./src/button/index.mjs";
-import { Typewriter as s } from "./src/typewriter/index.mjs";
+import { KButton as f } from "./src/button/index.mjs";
+import { KTypewriter as s } from "./src/typewriter/index.mjs";
 const r = {
   install: (e) => {
     for (let o in t)
@@ -8,7 +8,7 @@ const r = {
   }
 };
 export {
-  f as Button,
-  s as Typewriter,
+  f as KButton,
+  s as KTypewriter,
   r as default
 };

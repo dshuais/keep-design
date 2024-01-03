@@ -1,6 +1,6 @@
-import { Button as t } from "./button/index.mjs";
-import { Typewriter as p } from "./typewriter/index.mjs";
+import { KButton as t } from "./button/index.mjs";
+import { KTypewriter as p } from "./typewriter/index.mjs";
 export {
-  t as Button,
-  p as Typewriter
+  t as KButton,
+  p as KTypewriter
 };

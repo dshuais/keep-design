@@ -7,6 +7,6 @@ const c = (n) => {
   }, t;
 }, e = c(a);
 export {
-  e as Button,
+  e as KButton,
   e as default
 };

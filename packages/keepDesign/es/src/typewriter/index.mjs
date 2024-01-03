@@ -7,6 +7,6 @@ const a = (n) => {
   }, t;
 }, m = a(s);
 export {
-  m as Typewriter,
+  m as KTypewriter,
   m as default
 };

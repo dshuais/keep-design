@@ -1,6 +1,6 @@
 import type { Plugin } from "vue";
 declare type SFCWithInstall<T> = T & Plugin;
-export declare const Button: SFCWithInstall<import("vue").DefineComponent<{
+export declare const KButton: SFCWithInstall<import("vue").DefineComponent<{
     type: {
         type: StringConstructor;
         required: false;
@@ -16,4 +16,4 @@ export declare const Button: SFCWithInstall<import("vue").DefineComponent<{
         required: false;
     };
 }>>, {}, {}>>;
-export default Button;
+export default KButton;
