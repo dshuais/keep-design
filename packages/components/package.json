@@ -13,8 +13,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@vitest/coverage-v8": "^1.1.2"
-  }
+  "license": "ISC"
 }
