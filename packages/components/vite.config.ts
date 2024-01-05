@@ -2,14 +2,21 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-05 12:04:37
+ * @LastEditTime: 2024-01-05 12:21:07
  * @description: viteconfig
  */
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+  // 单元测试
+  test: {
+    environment: "happy-dom"
+  },
+
   build: {
     outDir: 'es', // 打包后文件目录
     minify: true, // 是否压缩
@@ -71,5 +78,5 @@ export default defineConfig({
         }
       }
     }
-  ]
+  ],
 });
