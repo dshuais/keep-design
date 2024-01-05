@@ -6,7 +6,7 @@
  * @Description: App
 -->
 <script setup lang="ts">
-import { KButton } from '@lib-template/components'
+import { KButton } from '@lib-template/components';
 </script>
 
 <template>

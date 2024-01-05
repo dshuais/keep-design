@@ -7,20 +7,19 @@
 -->
 <script setup lang="ts">
 import { computed } from 'vue';
-import './index.less'
+import './index.less';
 defineOptions({
   name: 'k-button'
-})
+});
 type ButtonProps = {
-  type?: string
-}
+  type?: string;
+};
 
-const buttonProps = defineProps<ButtonProps>()
+const buttonProps = defineProps<ButtonProps>();
 
 const buttonClass = computed(() => {
-  return { [`k-button--${buttonProps.type}`]: buttonProps.type }
-})
-
+  return { [`k-button--${buttonProps.type}`]: buttonProps.type };
+});
 </script>
 <template>
   <button class="k-button" :class="buttonClass">

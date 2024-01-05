@@ -5,5 +5,5 @@
  * @LastEditTime: 2024-01-02 16:39:08
  * @description: 心平气和
  */
-export * from "./button";
-export * from './typewriter'
+export * from './button';
+export * from './typewriter';

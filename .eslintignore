@@ -1,0 +1,4 @@
+**.d.ts
+/packages/keepDesign
+dist
+node_modules

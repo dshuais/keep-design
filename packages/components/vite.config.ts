@@ -2,12 +2,12 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-03 12:01:36
+ * @LastEditTime: 2024-01-05 12:04:37
  * @description: viteconfig
  */
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import dts from 'vite-plugin-dts'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
@@ -34,7 +34,7 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: './index.ts', // 打包入口文件
+      entry: './index.ts' // 打包入口文件
       // name: 'keepDesign',
       // fileName: 'keepDesign',
       // formats: ['es', 'umd', 'cjs']
@@ -46,25 +46,30 @@ export default defineConfig({
       entryRoot: './src',
       outputDir: ['../keepDesign/es/src', '../keepDesign/lib/src'],
       // 指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
-      tsConfigFilePath: '../../tsconfig.json',
+      tsConfigFilePath: '../../tsconfig.json'
     }),
     {
       name: 'style',
       generateBundle(options, bundle) {
         // 这里可以获取打包后的文件目录以及代码code
-        const keys = Object.keys(bundle);
+        const keys: (keyof typeof bundle)[] = Object.keys(bundle);
 
         for (const key of keys) {
-          const bundler: any = bundle[key];
+          const bundler: typeof bundle = bundle[
+            key
+          ] as unknown as typeof bundle;
           // rollup内置方法,将所有输出文件code中的.less换成.css,因为我们当时没有打包less文件
 
           this.emitFile({
             type: 'asset',
-            fileName: key, // 文件名不变 **.less
-            source: bundler.code.replace(/\.less/g, '.css')
-          })
+            fileName: key as string, // 文件名不变 **.less
+            source: (bundler.code as unknown as string).replace(
+              /\.less/g,
+              '.css'
+            )
+          });
         }
       }
     }
-  ],
-})
+  ]
+});

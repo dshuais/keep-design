@@ -6,10 +6,10 @@
  * @description: 打字机
 -->
 <script lang="ts" setup>
-import './index.less'
+import './index.less';
 defineOptions({
   name: 'k-typewriter'
-})
+});
 </script>
 <template>
   <div class="k-typewriter">打字机</div>
