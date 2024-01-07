@@ -14,7 +14,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   // 单元测试
   test: {
-    environment: "happy-dom"
+    environment: 'happy-dom'
   },
 
   build: {
@@ -78,5 +78,5 @@ export default defineConfig({
         }
       }
     }
-  ],
+  ]
 });

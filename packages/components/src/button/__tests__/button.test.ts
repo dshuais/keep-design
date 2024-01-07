@@ -5,9 +5,9 @@
  * @LastEditTime: 2024-01-05 14:29:31
  * @description: 测试button组件
  */
-import { describe, expect, it } from 'vitest'
-import { mount } from '@vue/test-utils'
-import Button from '../button.vue'
+import { describe, expect, it } from 'vitest';
+import { mount } from '@vue/test-utils';
+import Button from '../button.vue';
 
 // The component to test
 describe('test-k-button', () => {
@@ -17,9 +17,9 @@ describe('test-k-button', () => {
       slots: {
         default: 'k-button'
       }
-    })
-    expect(wrapper.text()).toBe('k-button')
-  })
+    });
+    expect(wrapper.text()).toBe('k-button');
+  });
 
   // 传入props
   it('should have props', () => {
@@ -27,9 +27,7 @@ describe('test-k-button', () => {
       props: {
         type: 'primary'
       }
-    })
-    expect(wrapper.classes()).toContain('k-button--primary')
-  })
-})
-
-
+    });
+    expect(wrapper.classes()).toContain('k-button--primary');
+  });
+});

@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-05 18:57:32
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-05 18:58:38
+ * @LastEditTime: 2024-01-07 20:28:28
  * @description: 下载命令
  */
 import download from 'download-git-repo';
@@ -22,7 +22,7 @@ export default (remote, name, option) => {
       downSpinner.succeed(chalk.green('模板下载成功！'));
       console.log(chalk.green(`cd ${name}\r\n`));
       console.log(chalk.blue('pnpm install\r\n'));
-      console.log('pnpm run build:keep\r\n');
+      console.log('pnpm build:keep\r\n');
       resolve();
     });
   });

@@ -1,3 +1,10 @@
+/*
+ * @Author: dushuai
+ * @Date: 2024-01-07 14:28:55
+ * @LastEditors: dushuai
+ * @LastEditTime: 2024-01-07 20:19:13
+ * @Description: cli命令
+ */
 import commandLineArgs from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import gitClone from './utils/gitClone.js';
@@ -48,16 +55,14 @@ const promptsOptions = [
     type: 'select', //单选
     name: 'template',
     message: '请选择一个模板',
-    choices: [
-      { title: 'keep-design', value: 1 },
-    ]
+    choices: [{ title: 'keep-design', value: 1 }]
   }
 ];
 
 const options = commandLineArgs(optionDefinitions);
 
 const remoteList = {
-  1: 'https://github.com/dshuais/keep-design',
+  1: 'https://github.com/dshuais/keep-design#main'
 };
 
 const getUserInfo = async () => {
