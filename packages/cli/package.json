@@ -1,8 +1,11 @@
 {
   "name": "create-keepdesign",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.2",
   "description": "一个快速生成组件库搭建环境的脚手架",
-  "bin": "index.js",
+  "main": "index.js",
+  "bin": {
+    "create-keepdesign": "index.js"
+  },
   "type": "module",
   "keywords": [
     "cli",
@@ -10,7 +13,8 @@
     "vue3组件库",
     "模板",
     "脚手架",
-    "components"
+    "components",
+    "create-keep-design"
   ],
   "author": "dshuais",
   "license": "MIT",
