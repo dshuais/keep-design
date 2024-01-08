@@ -2,27 +2,30 @@
  * @Author: dushuai
  * @Date: 2023-12-30 18:03:18
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-02 18:28:48
+ * @LastEditTime: 2024-01-08 10:48:02
  * @Description: button组件
 -->
 <script setup lang="ts">
 import { computed } from 'vue';
-import './index.less';
+import type { KButtonProps, KButtonEmits } from './k-button';
+import './style/index.scss';
 defineOptions({
   name: 'k-button'
 });
-type ButtonProps = {
-  type?: string;
-};
 
-const buttonProps = defineProps<ButtonProps>();
+const buttonProps = defineProps<KButtonProps>();
+const emit = defineEmits<KButtonEmits>();
 
 const buttonClass = computed(() => {
   return { [`k-button--${buttonProps.type}`]: buttonProps.type };
 });
+
+function handleClick() {
+  emit('click');
+}
 </script>
 <template>
-  <button class="k-button" :class="buttonClass">
+  <button class="k-button" :class="buttonClass" @click="handleClick">
     <slot />
   </button>
 </template>

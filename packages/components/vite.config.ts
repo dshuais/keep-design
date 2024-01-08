@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-05 12:21:07
+ * @LastEditTime: 2024-01-08 11:32:57
  * @description: viteconfig
  */
 /// <reference types="vitest" />
@@ -29,21 +29,21 @@ export default defineConfig({
           entryFileNames: '[name].mjs', // 打包后的文件名
           preserveModules: true, // 让打包目录和我们目录对应
           exports: 'named',
-          dir: '../keepDesign/es' // 打包后的文件目录
+          dir: '../KEEP_DESIGN/es' // 打包后的文件目录
         },
         {
           format: 'cjs', // 打包格式
           entryFileNames: '[name].js', // 打包后的文件名
           preserveModules: true, // 让打包目录和我们目录对应
           exports: 'named',
-          dir: '../keepDesign/lib' // 打包后的文件目录
+          dir: '../KEEP_DESIGN/lib' // 打包后的文件目录
         }
       ]
     },
     lib: {
       entry: './index.ts' // 打包入口文件
-      // name: 'keepDesign',
-      // fileName: 'keepDesign',
+      // name: 'KEEP_DESIGN',
+      // fileName: 'KEEP_DESIGN',
       // formats: ['es', 'umd', 'cjs']
     }
   },
@@ -51,7 +51,7 @@ export default defineConfig({
     vue(),
     dts({
       entryRoot: './src',
-      outputDir: ['../keepDesign/es/src', '../keepDesign/lib/src'],
+      outputDir: ['../KEEP_DESIGN/es/src', '../KEEP_DESIGN/lib/src'],
       // 指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
     }),

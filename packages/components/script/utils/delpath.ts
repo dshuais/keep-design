@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 17:08:02
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-03 18:29:23
+ * @LastEditTime: 2024-01-08 11:32:11
  * @description: 删除文件
  */
 import fs from 'fs';
@@ -26,7 +26,7 @@ const delPath = async (path: string) => {
       }
     });
 
-    if (path != `${pkgPath}/keepDesign`) fs.rmdirSync(path);
+    if (path != `${pkgPath}/KEEP_DESIGN`) fs.rmdirSync(path);
   }
 };
 
