@@ -1,8 +1,15 @@
+/*
+ * @Author: dushuai
+ * @Date: 2024-01-02 15:44:32
+ * @LastEditors: dushuai
+ * @LastEditTime: 2024-01-08 15:15:42
+ * @description: 心平气和
+ */
 import { createApp } from 'vue';
 import App from './App.vue';
-import libConponents from '@lib-template/components';
+import keepDesign from '@keep-design/components';
 
 const app = createApp(App);
 
-app.use(libConponents);
+app.use(keepDesign);
 app.mount('#app');

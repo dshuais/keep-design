@@ -74,7 +74,7 @@ importers:
 
   demo:
     dependencies:
-      '@lib-template/components':
+      '@keep-design/components':
         specifier: workspace:^
         version: link:../packages/components
     devDependencies:
@@ -84,6 +84,8 @@ importers:
       vite:
         specifier: ^5.0.10
         version: 5.0.10(@types/node@20.10.6)(sass@1.69.7)
+
+  packages/KEEP_DESIGN: {}
 
   packages/cli:
     dependencies:

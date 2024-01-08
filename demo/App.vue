@@ -2,11 +2,11 @@
  * @Author: dushuai
  * @Date: 2023-12-30 17:53:17
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-08 14:42:28
+ * @LastEditTime: 2024-01-08 15:16:47
  * @Description: App
 -->
 <script setup lang="ts">
-import { KButton } from '@lib-template/components';
+// import { KButton } from '@lib-template/components';
 // import type { KButtonInstance } from '@lib-template/components/src/k-button/k-button.vue'
 </script>
 
@@ -20,4 +20,5 @@ import { KButton } from '@lib-template/components';
 
   <div>全局挂载</div>
   <k-button type="primary">全局挂载</k-button>
+  <k-button>123</k-button>
 </template>
