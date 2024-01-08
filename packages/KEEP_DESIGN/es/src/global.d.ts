@@ -2,7 +2,9 @@ import * as components from "./index";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    KButton: typeof components.KButton;
+    // KButton: typeof import('keep-design')['KButton'];
+    KButton: typeof components['KButton'];
+
   }
 }
 export { };

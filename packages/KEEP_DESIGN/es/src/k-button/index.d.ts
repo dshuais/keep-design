@@ -19,3 +19,4 @@ export declare const KButton: import("../../script/utils/install").SFCWithInstal
     onClick?: ((...args: any[]) => any) | undefined;
 }, {}, {}>> & Record<string, any>;
 export default KButton;
+export * from './k-button';
