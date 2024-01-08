@@ -2,7 +2,7 @@
  * @Author: dushuai
  * @Date: 2024-01-02 16:11:16
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-08 14:16:50
+ * @LastEditTime: 2024-01-08 18:00:51
  * @description: viteconfig
  */
 /// <reference types="vitest" />
@@ -43,7 +43,7 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: './index.ts' // 打包入口文件
+      entry: './index.ts', // 打包入口文件
       // name: 'KEEP_DESIGN',
       // fileName: 'KEEP_DESIGN',
       // formats: ['es', 'umd', 'cjs']
@@ -58,7 +58,8 @@ export default defineConfig({
       // 指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json',
       // staticImport: true,
-      // rollupTypes: true
+      // rollupTypes: true, // 如果你希望将所有的类型合并到一个文件中
+      // clearPureImport: false, // 是否移除 `import 'xxx'` 默认true
     }),
     {
       name: 'style',

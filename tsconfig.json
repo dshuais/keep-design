@@ -106,5 +106,10 @@
   //   "./packages/components/src/index.ts",
   //   "./packages/components/src/**/**.ts",
   //   "./packages/components/src/**/**.vue",
+  //   "./packages/components/src/**/**.tsx",
+  //   "./packages/components/src/**/**.d.ts",
+  //   "./**/**/**.d.ts",
+  //   "./**/**/**/**.d.ts",
+  //   "./**/src/**/**.d.ts"
   // ],
 }
