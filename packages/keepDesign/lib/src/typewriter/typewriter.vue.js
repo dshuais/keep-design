@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue");require("./index.css");const t={class:"k-typewriter"},r=e.defineComponent({name:"k-typewriter",__name:"typewriter",setup(n){return(o,c)=>(e.openBlock(),e.createElementBlock("div",t,"打字机"))}});exports.default=r;

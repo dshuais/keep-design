@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.js"),i=require("./src/button/index.js"),n=require("./src/typewriter/index.js"),u={install:t=>{for(let r in e)t.use(e[r])}};exports.KButton=i.KButton;exports.KTypewriter=n.KTypewriter;exports.default=u;
