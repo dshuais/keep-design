@@ -1,0 +1,9 @@
+{
+  "name": "@keep-design/resolver",
+  "version": "1.0.0",
+  "description": "组件库自动导入插件",
+  "main": "./index",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

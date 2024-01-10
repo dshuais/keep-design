@@ -1,26 +1,32 @@
 /*
  * @Author: dushuai
- * @Date: 2024-01-07 14:28:55
+ * @Date: 2024-01-10 09:33:53
  * @LastEditors: dushuai
- * @LastEditTime: 2024-01-07 20:19:13
- * @Description: cli命令
+ * @LastEditTime: 2024-01-10 10:04:28
+ * @description: 模板命令
  */
-import commandLineArgs from 'command-line-args';
-import commandLineUsage from 'command-line-usage';
-import gitClone from './utils/gitClone.js';
-import prompts from 'prompts';
-import { readFile } from 'fs/promises';
+import commandLineArgs from "command-line-args";
+import commandLineUsage from "command-line-usage";
+import prompts from "prompts";
+import { readFile } from "fs/promises";
+import gitClone from "./utils/gitClone.js";
 
-const pkg = JSON.parse(
-  await readFile(new URL('./package.json', import.meta.url))
-);
-//配置命令参数
+/**
+ * package.json
+ */
+const pkgJSON = JSON.parse(await readFile(new URL("./package.json", import.meta.url)));
+
+/**
+ * 配置命令参数
+ */
 const optionDefinitions = [
   { name: 'version', alias: 'v', type: Boolean },
   { name: 'help', alias: 'h', type: Boolean }
-];
+]
 
-//帮助命令
+/**
+ * 帮助命令
+ */
 const helpSections = [
   {
     header: 'create-keep-design',
@@ -28,7 +34,7 @@ const helpSections = [
   },
   {
     header: 'Options',
-    optionList: [
+    optionsList: [
       {
         name: 'version',
         alias: 'v',
@@ -43,44 +49,59 @@ const helpSections = [
       }
     ]
   }
-];
+]
 
+/**
+ * 下载步骤
+ */
 const promptsOptions = [
   {
     type: 'text',
     name: 'name',
-    message: '请输入项目名称'
+    message: '请输入项目名称',
+    initial: 'keep-design'
   },
   {
-    type: 'select', //单选
+    type: 'select',
     name: 'template',
-    message: '请选择一个模板',
-    choices: [{ title: 'keep-design', value: 1 }]
+    message: '请选择项目模板',
+    choices: [
+      { title: 'keep-design', value: 1 },
+      { title: 'vue3-mobile-template', value: 2 },
+      { title: 'vue3-pc-template', value: 3 },
+      { title: 'nuxt-template', value: 4 },
+    ]
   }
-];
+]
 
-const options = commandLineArgs(optionDefinitions);
-
+/**
+ * 模板github地址and分支
+ */
 const remoteList = {
-  1: 'https://github.com/dshuais/keep-design#main'
-};
+  1: 'https://github.com/dshuais/create-keep-design#main',
+  2: 'https://github.com/dshuais/vue3-mobile-template',
+  3: 'https://github.com/dshuais/vue3-pc-template',
+  4: 'https://github.com/dshuais/nuxt-template#main'
+}
 
-const getUserInfo = async () => {
-  const res = await prompts(promptsOptions);
-  if (!res.name || !res.template) return;
-  gitClone(`direct:${remoteList[res.template]}`, res.name, { clone: true });
-};
+const options = commandLineArgs(optionDefinitions)
 
-const runOptions = () => {
-  if (options.version) {
-    console.log(`v${pkg.version}`);
-    return;
-  }
-  if (options.help) {
-    console.log(commandLineUsage(helpSections));
-    return;
-  }
-  getUserInfo();
-};
+/**
+ * 下载
+ */
+const getCloneTemplate = async () => {
+  const res = await prompts(promptsOptions)
+  if (!res.name || !res.template) return
+  gitClone(`direct:${remoteList[res.template]}`, res.name, { clone: true }, res.template)
+}
 
-runOptions();
+/**
+ * 执行操作
+ */
+const run = () => {
+  if (options.help) return console.log(commandLineUsage(helpSections));
+  if (options.version) return console.log(`v${pkgJSON.version}`)
+  getCloneTemplate()
+}
+
+run()

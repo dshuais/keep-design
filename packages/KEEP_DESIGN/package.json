@@ -4,6 +4,7 @@
   "description": "一个奇怪且有个性的Vue3组件库",
   "main": "lib/index.js",
   "module": "es/index.mjs",
+  "typings": "types/index.d.ts",
   "files": [
     "es",
     "lib"
@@ -27,7 +28,6 @@
   ],
   "author": "dshuais",
   "license": "MIT",
-  "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/dshuais/keep-design"
