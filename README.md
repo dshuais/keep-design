@@ -8,4 +8,4 @@
 pnpm add keep-design --save
 ```
 
-> 持续完善中...
+**暂停开发！**
